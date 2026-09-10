@@ -3,11 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=/doggoledger-legal/support.html">
-  <link rel="canonical" href="https://unclevan.github.io/doggoledger-legal/support.html">
-  <title>技术支持</title>
+  <meta name="description" content="黑狗记账（DoggoLedger）技术支持、常见问题与联系信息。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <title>技术支持 · 黑狗记账</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p><a href="/doggoledger-legal/support.html">查看技术支持</a></p>
+  <header class="site-header">
+    <div class="brand">
+      <a class="app-icon-link" href="https://apps.apple.com/cn/app/%E9%BB%91%E7%8B%97%E8%AE%B0%E8%B4%A6/id6802510951" aria-label="在 App Store 查看黑狗记账">
+        <img class="brand-icon" src="assets/app-icon.webp" alt="黑狗记账 App 图标" width="38" height="38">
+      </a>
+      <a class="brand-name" href="index.html" aria-label="返回黑狗记账首页">黑狗记账</a>
+    </div>
+    <nav aria-label="主要导航">
+      <a aria-current="page" href="support.html">技术支持</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+  </header>
+
+  <main class="policy-layout">
+    <article class="policy-card">
+      <header class="policy-heading">
+        <p class="eyebrow">DoggoLedger</p>
+        <h1>技术支持</h1>
+        <p class="effective-date">适用于黑狗记账 iOS App</p>
+      </header>
+
+      <div class="notice">
+        <strong>需要帮助？</strong>
+        <p>请发送邮件至 <a href="mailto:i@fanchengb.in?subject=%E9%BB%91%E7%8B%97%E8%AE%B0%E8%B4%A6%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">i@fanchengb.in</a>。请勿在邮件中提供 Apple ID 密码、设备密码、备份密码或支付信息。</p>
+      </div>
+
+      <section id="contact">
+        <h2>联系技术支持</h2>
+        <dl class="contact-list">
+          <dt>应用</dt><dd>黑狗记账（DoggoLedger）</dd>
+          <dt>开发者</dt><dd>FAN CHENGBIN</dd>
+          <dt>支持邮箱</dt><dd><a href="mailto:i@fanchengb.in?subject=%E9%BB%91%E7%8B%97%E8%AE%B0%E8%B4%A6%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">i@fanchengb.in</a></dd>
+        </dl>
+        <p>为了更快定位问题，建议说明设备型号、iOS 版本、App 版本、问题发生时间、操作步骤和看到的错误提示。截图请先遮盖账单内容、Apple ID、文件名等个人信息。</p>
+      </section>
+
+      <section id="purchases">
+        <h2>购买或恢复购买</h2>
+        <p>请在 App 的“设置”中打开“开通与恢复”，然后选择“恢复购买”。该操作会调用 Apple 提供的购买同步服务，不会删除或修改账本数据。</p>
+        <p>App Store 的“媒体与购买项目”账户负责购买权益，iCloud 账户负责 CloudKit 数据同步，两者是相互独立的账户体系。切换购买账户不会自动切换 iCloud 数据所在账户。</p>
+      </section>
+
+      <section id="icloud">
+        <h2>iCloud 自动同步</h2>
+        <p>所有用户数据默认保存在设备本地。使用多设备自动同步，需要先开通 iCloud 自动同步并在 App 设置中主动开启；参与同步的设备还需要登录同一 iCloud 账户。</p>
+        <p>临时断网时，已有账本仍可在本机使用。恢复网络后系统会继续处理同步。若长期没有更新，请确认设备已登录 iCloud、网络可用、iCloud Drive 可用，并重新打开 App 查看同步状态。</p>
+      </section>
+
+      <section id="import-export">
+        <h2>导入、导出与完整备份</h2>
+        <p>“导出全部账单”支持 CSV 和 JSON；完整备份使用 <code>.doggoledger</code> 文件，并可选择密码加密。文件由你通过系统文件选择器决定保存位置。</p>
+        <p>备份密码不会被 App 或开发者保存，遗失后无法找回。第三方数据导入会持续适配主流记账应用；如果文件无法识别，请在邮件中说明来源应用和导出格式。除非确有必要，请不要直接发送包含真实账单的文件。</p>
+      </section>
+
+      <section id="deletion">
+        <h2>删除所有账本数据</h2>
+        <p>“设置”中的“删除所有账本数据”会先要求设备所有者认证，并在认证成功后再次显示最终确认。开启 iCloud Sync 时，删除结果会同步至使用同一 iCloud 账户的其他设备。</p>
+        <p>该操作不会删除 StoreKit 购买权益、iCloud 开启偏好、普通 App 设置或此前手工导出的备份文件。账本删除不可撤销，操作前请确认是否需要保留完整备份。</p>
+      </section>
+
+      <section id="privacy">
+        <h2>隐私与数据安全</h2>
+        <p>黑狗记账采用本地优先设计，不要求注册 App 账号。技术支持页面不使用客服表单、Cookie、广告或统计脚本。你主动发送的邮件仅用于处理咨询。</p>
+        <p>关于 App 数据处理、CloudKit、StoreKit、备份和日志的完整说明，请阅读<a href="privacy.html">隐私政策</a>。</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 FAN CHENGBIN</p>
+    <p><a href="index.html">首页</a><span aria-hidden="true"> · </span><a href="privacy.html">隐私政策</a><span aria-hidden="true"> · </span><a href="mailto:i@fanchengb.in">i@fanchengb.in</a></p>
+  </footer>
 </body>
 </html>
