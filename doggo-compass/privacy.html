@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="黑狗罗盘（Doggo Compass）隐私政策：定位、运动传感器、实验测光与本机偏好的处理说明。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="黑狗罗盘">
+  <meta property="og:title" content="隐私政策 · 黑狗罗盘">
+  <meta property="og:description" content="了解黑狗罗盘如何在设备上处理定位、运动、相机测光与偏好数据。">
+  <meta property="og:url" content="https://unclevan.github.io/doggo-compass/privacy.html">
+  <meta property="og:image" content="https://unclevan.github.io/doggo-compass/assets/app-icon.webp">
+  <link rel="canonical" href="https://unclevan.github.io/doggo-compass/privacy.html">
+  <link rel="apple-touch-icon" href="assets/app-icon-180.png">
+  <title>隐私政策 · 黑狗罗盘</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="app-icon-link" href="index.html" aria-label="黑狗罗盘首页">
+        <img class="brand-icon" src="assets/app-icon.webp" alt="" width="38" height="38">
+      </a>
+      <a class="brand-name" href="index.html">黑狗罗盘</a>
+    </div>
+    <nav aria-label="主要导航">
+      <a href="support.html">技术支持</a>
+      <a aria-current="page" href="privacy.html">隐私政策</a>
+    </nav>
+  </header>
+
+  <main class="policy-layout">
+    <article class="policy-card">
+      <header class="policy-heading">
+        <p class="eyebrow">Doggo Compass</p>
+        <h1>隐私政策</h1>
+        <p class="effective-date">生效日期：2026 年 9 月 20 日</p>
+      </header>
+
+      <div class="notice">
+        <strong>摘要</strong>
+        <p>黑狗罗盘（Doggo Compass）无需注册账号，不使用开发者自建服务器，不集成第三方广告、统计或崩溃收集 SDK，也不进行跨 App 或跨网站追踪。位置、相机画面、运动数据和传感器读数不会上传给开发者。</p>
+      </div>
+
+      <section id="scope">
+        <h2>一、适用范围与运营者</h2>
+        <p>本政策适用于由 <strong>FAN CHENGBIN</strong>（以下简称“我们”）提供的黑狗罗盘 iOS App 及本隐私政策网站，用于说明相关信息如何被处理。</p>
+        <p>隐私问题可联系：<a href="mailto:i@fanchengb.in">i@fanchengb.in</a>。</p>
+      </section>
+
+      <section id="location">
+        <h2>二、定位、方向与地区名称</h2>
+        <p>在你允许“使用 App 期间”的位置权限后，App 使用 Apple Core Location 获取设备朝向、磁力计航向、经纬度、海拔和位置精度，用于在界面中显示方向与位置读数。真北需要结合当前位置计算；不可用时 App 会回退到磁北。App 不声明后台定位，并在离开活动状态时停止位置和方向更新。</p>
+        <p>为把坐标转换为地区名称，App 会将当前位置交给 Apple 提供的反向地理编码服务处理：iOS 26 及以上使用 MapKit 的 <code>MKReverseGeocodingRequest</code>，较早的受支持系统使用 <code>CLGeocoder</code>。该请求可能把坐标发送给 Apple，其处理受 Apple 的条款和隐私政策约束；开发者不接收或保存这些坐标。</p>
+        <p>你可以拒绝定位权限或在系统设置中关闭“精确位置”，但方向基准、坐标、海拔、精度或地区名称可能不可用或不够准确。</p>
+      </section>
+
+      <section id="motion">
+        <h2>三、运动与环境传感器</h2>
+        <p>专业视图通过 Apple Core Motion 在设备上读取并显示姿态、加速度、陀螺仪角速度、磁场和气压计数据。不同设备的传感器能力不同，不支持、未授权或尚无样本时会显示“--”。这些实时读数不由开发者收集或保存。</p>
+        <p>只有当你主动选择“启用活动数据”时，App 才会使用“运动与健身”权限，通过 <code>CMPedometer</code> 查询和更新当天步数、步行距离、当前步频及上下楼层等设备支持的数据。启用偏好会保存在本机，以便下次打开 App 时恢复当天查询；你可在系统设置中撤回权限。</p>
+      </section>
+
+      <section id="camera">
+        <h2>四、实验测光与相机</h2>
+        <p>App 仅在你主动点击启用实验测光后申请前置摄像头权限。启用期间，相机视频帧只在内存中抽样，用于估算画面相对亮度和相机白平衡色温；该结果不是环境光传感器的 Lux 实测值。</p>
+        <p>App 不拍照、不录像，不把相机画面写入文件、照片图库或偏好设置，也不保存或上传相机画面。你点击“停止相机测光”，或 App 进入非活动状态及后台时，相机会话会停止。相机工作期间，iOS 会显示绿色相机使用指示。</p>
+      </section>
+
+      <section id="clipboard-preferences">
+        <h2>五、剪贴板与本机偏好</h2>
+        <ul>
+          <li><strong>剪贴板：</strong>仅当你长按坐标时，App 才把当前格式的坐标写入系统剪贴板；App 不主动读取剪贴板。</li>
+          <li><strong>本机偏好：</strong>App 使用 UserDefaults（SwiftUI <code>@AppStorage</code>）保存显示模式、默认坐标格式、隅方位显示、风水视图北向基准及是否启用活动数据等功能偏好。</li>
+        </ul>
+        <p>这些偏好保存在设备上，不会上传给开发者。删除 App 会清除由 App 保存在本机的偏好；开发者没有服务器端个人数据可供删除。</p>
+      </section>
+
+      <section id="collection">
+        <h2>六、账号、服务器与第三方 SDK</h2>
+        <p>App 不要求注册或登录账号，不使用开发者自建服务器，不集成第三方广告、统计或崩溃收集 SDK，也不使用 CloudKit 或 StoreKit。App 不访问广告标识符，不进行跨 App 或跨网站追踪，不向开发者上传精确位置、相机画面、运动数据或传感器读数。</p>
+        <p>Apple 可能根据你的系统隐私与诊断设置，向开发者提供汇总的 App Store 下载、使用情况和诊断信息。这些信息由 Apple 处理和提供，不是 App 自行集成统计或崩溃 SDK 所收集的数据。</p>
+      </section>
+
+      <section id="website">
+        <h2>七、本网站</h2>
+        <p>本网站托管于 GitHub Pages，是纯静态页面，不设置 Cookie，不加载广告、分析脚本、外部字体或其他不必要的第三方资源。GitHub 作为托管服务提供商，可能按其自身政策处理访问所必需的网络与日志信息。</p>
+        <p>点击邮件链接会打开你选择的邮件应用。你主动发送的邮件及其中信息用于回复咨询；请不要发送不必要的敏感信息。</p>
+      </section>
+
+      <section id="security-retention">
+        <h2>八、安全与保留</h2>
+        <p>App 通过 iOS 权限机制限制定位、运动与相机能力，并将显示偏好保存在 App 的本机沙盒中。任何软件或设备环境都无法保证绝对安全，但我们会在合理范围内减少数据处理并及时修复已知问题。</p>
+        <p>实时位置、相机帧、运动和传感器读数不由 App 持久保存。用户主动复制的坐标由系统剪贴板管理，其保留和同步取决于你的 Apple 设备与系统设置。</p>
+      </section>
+
+      <section id="rights-children">
+        <h2>九、你的选择、权利与儿童隐私</h2>
+        <p>你可以在 iOS“设置”中查看或撤回定位、精确位置、运动与健身及相机权限，也可以停止使用或删除 App。若你希望了解或行使适用法律赋予的数据权利，可通过本政策所列邮箱联系我们；由于我们没有服务器端 App 账号或个人数据，部分请求可能没有可供检索、导出或删除的开发者侧记录。</p>
+        <p>App 不以儿童为目标，不要求儿童提供个人资料，也不会由开发者主动收集儿童的个人信息。如果你认为儿童向我们发送了个人信息，请联系我们处理。</p>
+      </section>
+
+      <section id="updates">
+        <h2>十、政策更新</h2>
+        <p>功能、系统能力或适用规则发生变化时，我们可能更新本政策，并在本页面公布新版本及生效日期。若未来引入新的数据处理、服务器或第三方服务，会在启用前更新说明和必要的系统或 App Store 披露。</p>
+      </section>
+
+      <section id="contact">
+        <h2>十一、联系我们</h2>
+        <dl class="contact-list">
+          <dt>应用</dt><dd>黑狗罗盘（Doggo Compass）</dd>
+          <dt>开发者/运营者</dt><dd>FAN CHENGBIN</dd>
+          <dt>电子邮箱</dt><dd><a href="mailto:i@fanchengb.in?subject=%E9%BB%91%E7%8B%97%E7%BD%97%E7%9B%98%E9%9A%90%E7%A7%81%E9%97%AE%E9%A2%98">i@fanchengb.in</a></dd>
+        </dl>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 FAN CHENGBIN</p>
+    <p><a href="index.html">首页</a><span aria-hidden="true"> · </span><a href="support.html">技术支持</a><span aria-hidden="true"> · </span><a href="mailto:i@fanchengb.in">i@fanchengb.in</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+  --accent: #e44732;
+  --accent-dark: #ad2f20;
+  --accent-soft: rgba(228, 71, 50, 0.12);
+}
+
+.product-lockup {
+  display: grid;
+  grid-template-columns: minmax(112px, 180px) 1fr;
+  align-items: center;
+  gap: clamp(24px, 5vw, 56px);
+}
+
+.product-icon {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 28%;
+  box-shadow: 0 24px 56px rgba(4, 19, 35, 0.25);
+}
+
+.product-lockup .hero-copy,
+.product-lockup .hero-actions {
+  grid-column: 2;
+}
+
+.product-lockup .hero-actions { margin-top: 2px; }
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 86px 0 0;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+.section-heading p {
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.feature-grid.compact { margin-top: 28px; }
+
+.feature-card.wide { grid-column: span 2; }
+
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-list span { color: var(--muted); }
+.spec-list strong { text-align: right; }
+
+.policy-card code {
+  padding: 0.12em 0.35em;
+  border-radius: 5px;
+  background: var(--accent-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+@media (max-width: 760px) {
+  .product-lockup { grid-template-columns: 82px 1fr; gap: 18px; }
+  .product-lockup .hero-copy { grid-column: 1 / -1; }
+  .product-lockup .hero-actions { grid-column: 1 / -1; margin-top: 2px; }
+  .section-heading { margin-top: 58px; }
+  .feature-card.wide { grid-column: auto; }
+  .spec-list { grid-template-columns: 1fr; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #ff5a43;
+    --accent-dark: #ff826f;
+    --accent-soft: rgba(255, 90, 67, 0.13);
+  }
+}

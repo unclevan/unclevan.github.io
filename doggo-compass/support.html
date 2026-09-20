@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="黑狗罗盘（Doggo Compass）技术支持、权限设置、精度说明与常见问题。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="黑狗罗盘">
+  <meta property="og:title" content="技术支持 · 黑狗罗盘">
+  <meta property="og:description" content="黑狗罗盘的权限设置、校准、读数精度与使用帮助。">
+  <meta property="og:url" content="https://unclevan.github.io/doggo-compass/support.html">
+  <meta property="og:image" content="https://unclevan.github.io/doggo-compass/assets/app-icon.webp">
+  <link rel="canonical" href="https://unclevan.github.io/doggo-compass/support.html">
+  <link rel="apple-touch-icon" href="assets/app-icon-180.png">
+  <title>技术支持 · 黑狗罗盘</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="app-icon-link" href="index.html" aria-label="黑狗罗盘首页">
+        <img class="brand-icon" src="assets/app-icon.webp" alt="" width="38" height="38">
+      </a>
+      <a class="brand-name" href="index.html">黑狗罗盘</a>
+    </div>
+    <nav aria-label="主要导航">
+      <a aria-current="page" href="support.html">技术支持</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+  </header>
+
+  <main class="policy-layout">
+    <article class="policy-card">
+      <header class="policy-heading">
+        <p class="eyebrow">Doggo Compass</p>
+        <h1>技术支持</h1>
+        <p class="effective-date">适用于黑狗罗盘 iPhone App · 最低要求 iOS 17</p>
+      </header>
+
+      <div class="notice">
+        <strong>需要帮助？</strong>
+        <p>请发送邮件至 <a href="mailto:i@fanchengb.in?subject=%E9%BB%91%E7%8B%97%E7%BD%97%E7%9B%98%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">i@fanchengb.in</a>。建议附上设备型号、iOS 版本、App 版本、问题步骤和读数截图，请先遮盖不希望分享的位置或坐标。</p>
+      </div>
+
+      <section id="contact">
+        <h2>联系技术支持</h2>
+        <dl class="contact-list">
+          <dt>应用</dt><dd>黑狗罗盘（Doggo Compass）</dd>
+          <dt>开发者/运营者</dt><dd>FAN CHENGBIN</dd>
+          <dt>支持邮箱</dt><dd><a href="mailto:i@fanchengb.in?subject=%E9%BB%91%E7%8B%97%E7%BD%97%E7%9B%98%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">i@fanchengb.in</a></dd>
+        </dl>
+      </section>
+
+      <section id="location-permission">
+        <h2>如何允许定位权限？</h2>
+        <p>首次启动时，请在系统提示中选择“使用 App 时允许”。若之前拒绝，请前往 iPhone“设置”→“隐私与安全性”→“定位服务”→“黑狗罗盘”，选择“使用 App 期间”。也可以从 App 的权限提示跳转到系统设置。</p>
+        <p>关闭“精确位置”后，系统只向 App 提供模糊位置。坐标、地区名称、海拔和位置精度会受到影响，依赖位置校正的真北也可能不可用；磁北通常仍可由磁力计提供。</p>
+      </section>
+
+      <section id="north-reference">
+        <h2>真北与磁北有什么区别？</h2>
+        <p>真北指向地理北极，需要结合当前位置进行校正。磁北由设备磁力计测得，指向磁北极，会受到当地磁偏角和周围磁场影响。极简和专业视图会在真北可用时优先显示真北，否则回退到磁北；风水视图可在页面内切换基准，真北不可用时也会回退到磁北。</p>
+      </section>
+
+      <section id="accuracy-calibration">
+        <h2>为什么方向可能不准确？如何校准？</h2>
+        <p>室内钢结构、车辆、扬声器、磁性手机壳、磁吸配件、充电器、电源线和其他电子设备都可能干扰磁力计。请移开干扰源，取下磁性配件，到较开阔的位置重新观察。</p>
+        <p>当 iOS 显示罗盘校准提示时，请按屏幕指引转动设备；若没有提示，可缓慢地让 iPhone 在多个方向转动，形成“8”字轨迹，再保持设备平稳。确认系统“设置”→“隐私与安全性”→“定位服务”→“系统服务”中的“罗盘校准”已开启。系统是否显示校准界面由 iOS 决定。</p>
+      </section>
+
+      <section id="altitude-accuracy">
+        <h2>为什么海拔和位置精度会波动？</h2>
+        <p>GPS、Wi-Fi、蜂窝网络、可见卫星、建筑遮挡、天气和设备传感器都会影响定位。室内和高楼间的海拔尤其容易波动；“水平精度”和“垂直精度”是系统对当前误差范围的估计，不是保证值。等待片刻、移到开阔处并开启精确位置通常会改善读数。</p>
+      </section>
+
+      <section id="coordinates">
+        <h2>如何切换或复制坐标？</h2>
+        <p>在极简视图轻点坐标，可在十进制度与度分秒之间临时切换；在“设置”→“坐标格式”可选择下次进入时的默认格式。长按坐标会把当前格式写入系统剪贴板。专业视图会同时显示两种格式，长按位置数据区域可复制设置中选定的格式。</p>
+      </section>
+
+      <section id="views">
+        <h2>如何切换极简、专业和风水视图？</h2>
+        <p>点按主界面右上角的齿轮，在“显示模式”中选择“极简”“专业”或“风水”。选择会保存在本机，下次启动时继续使用。</p>
+      </section>
+
+      <section id="missing-data">
+        <h2>为什么部分专业数据显示“--”？</h2>
+        <p>“--”表示当前没有有效样本、权限尚未允许、定位精度无效，或设备不支持对应硬件。例如部分机型没有气压计或楼层统计，真北需要有效位置，速度和路线航向通常需要设备实际移动。iOS 公共 API 也不提供逐颗卫星信号、环境光传感器 Lux、电池温度或电压。</p>
+      </section>
+
+      <section id="camera">
+        <h2>为什么实验测光会出现绿色相机指示？</h2>
+        <p>实验测光由前置摄像头画面估算相对亮度和白平衡色温，因此启用时 iOS 会显示绿色相机使用指示。这是正常的系统隐私提示。App 不拍照、不录像、不保存或上传画面；点击“停止相机测光”，或 App 进入非活动状态及后台时会停止相机会话。</p>
+      </section>
+
+      <section id="permissions">
+        <h2>如何管理相机、运动与健身、定位权限？</h2>
+        <p>打开 iPhone“设置”→“隐私与安全性”，分别进入“相机”“运动与健身”或“定位服务”，找到“黑狗罗盘”后调整权限。相机权限只在你主动启用实验测光时请求；运动与健身权限只在你主动启用活动数据时使用。撤回权限后，相应数据会停止更新或显示“--”。</p>
+      </section>
+
+      <section id="feng-shui">
+        <h2>风水视图说明</h2>
+        <p>风水视图使用八方、后天八卦与二十四山呈现传统方位文化，仅供探索和娱乐。它不构成科学测量、建筑规划或专业堪舆建议，也不应作为安全、施工、导航或其他专业决策的唯一依据。</p>
+      </section>
+
+      <section id="privacy">
+        <h2>隐私与数据处理</h2>
+        <p>黑狗罗盘无需注册账号，不接入广告或跨 App 追踪。有关定位、反向地理编码、传感器、实验测光、剪贴板和本机偏好的完整说明，请阅读<a href="privacy.html">隐私政策</a>。</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 FAN CHENGBIN</p>
+    <p><a href="index.html">首页</a><span aria-hidden="true"> · </span><a href="privacy.html">隐私政策</a><span aria-hidden="true"> · </span><a href="mailto:i@fanchengb.in">i@fanchengb.in</a></p>
+  </footer>
+</body>
+</html>
