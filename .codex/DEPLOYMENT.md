@@ -1,6 +1,6 @@
 # Static sites and production deployment
 
-Last reviewed: 2026-09-20
+Last reviewed: 2026-09-22
 
 ## Default publication policy
 
@@ -25,6 +25,15 @@ Last reviewed: 2026-09-20
 
 Keep the two products isolated. A change for one site must not rewrite,
 replace, or deploy the other site's content.
+
+## Current Doggo Compass publication
+
+- The iPhone App Store listing is `https://apps.apple.com/cn/app/%E9%BB%91%E7%8B%97%E7%BD%97%E7%9B%98/id6813387560`. The header icon and brand name on the home, support, and privacy pages link to it; the home page also has an App Store button.
+- The home-page headline is `知经纬，定方向。`.
+- The header and hero use `doggo-compass/assets/app-icon-v4.webp` (512 × 512). Open Graph uses the same image; Apple Touch Icon uses `doggo-compass/assets/app-icon-v4-180.png` (180 × 180). Both are derived from `DoggoCompass/Branding/assets/doggocompass-app-icon-polished-v4-sparse-ticks-1024.png` in the adjacent app repository.
+- The new asset filenames avoid a stale image under the site's seven-day static cache. The older image files remain available for previously cached pages.
+- The 2026-09-22 production changes were deployed to the ECS from this local source. Recoverable backups are `/data/backups/apps/zhinan.enlightened.cn-pre-appstore-links-20260922.tar.gz` and `/data/backups/apps/zhinan.enlightened.cn-pre-v4-icon-headline-20260922.tar.gz`.
+- After the latest deployment, `nginx -t` passed, Nginx was reloaded and remained active, HTTP redirected to HTTPS, the HTML/CSS/image responses had the expected status and Content-Type, production file hashes matched the source, and the site-specific error log was empty. More detail is recorded in `/root/SERVER_NOTES.md` on the server.
 
 ## Server access and sources of truth
 
